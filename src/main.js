@@ -3,13 +3,21 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
+
+// iview 使用cdn或静态资源加载，经测试，使用cdn或静态资源引入的形式，包体积减少1M，打包时间缩短13s
+// import iView from 'iview'
+// import 'iview/dist/styles/iview.css'
+
+// Vue.use(iView)
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    store,
+    components: { App },
+    template: '<App/>'
 })
